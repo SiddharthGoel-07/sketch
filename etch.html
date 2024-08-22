@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> A Sketching Board</title>
+     <style>
+        
+        body{
+            background-color: #ede7e7c7;
+        }
+
+        #skit{
+            color: #004D40;
+            font-family: Helvetica;
+            font-size: 33px;
+            text-align: center;
+        }
+
+        #board{
+
+            background-color: #F7F7F7;
+            height: 600px;
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #outer{
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .Cell{
+            flex:  1  1 auto;
+           flex-wrap: wrap;
+           border: 2px solid grey;
+           
+            
+        }
+
+        .features{
+
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            column-gap: 50px;
+            
+        }
+
+        
+
+     </style>
+    </head>
+    
+    <body>
+         
+        <div id="outer">
+           
+        <h2 id="skit">
+            Sketching Board
+        </h2>
+
+        <div class="features">
+            <div><input type="color" id="picker"></div>
+            <button id="eraser">Eraser</button>
+            <div ><input type="range" id="slider" min="10" max="100" value="50"></div>
+        </div>
+         
+       
+        <div id="board">
+
+        </div>
+       
+        
+    </div>
+
+    <script src="Etch.js"></script>
+    </body>
+</html>    
